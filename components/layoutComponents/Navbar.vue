@@ -12,8 +12,10 @@
                 KJG<br />Pfarrjugend Hüls
             </NuxtLink>
             <div class="links">
+                <NuxtLink to="/ueberuns">Über uns</NuxtLink>
                 <NuxtLink to="/gruppen">Gruppen</NuxtLink>
                 <NuxtLink to="/fotos">Fotos</NuxtLink>
+                <NuxtLink to="/kontakt">Kontakt</NuxtLink>
                 <a
                     v-if="useState('loggedIn').value"
                     class="btn-primary"

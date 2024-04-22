@@ -1,8 +1,5 @@
 <template>
     <div class="container">
-        <div class="text-center pb-2">
-            <h3>Aktuelle Downloads</h3>
-        </div>
         <div
             v-for="(download, index) in downloads"
             :key="index"
@@ -53,7 +50,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-    padding: 4rem 0;
+    padding: 1rem 0;
 }
 p {
     text-decoration: none;

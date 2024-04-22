@@ -1,7 +1,6 @@
 <template>
     <div class="b-container">
         <div class="text-center">
-            <h2>Das sind wir</h2>
             <h3>Echte Frönde stonnt tesaame...</h3>
         </div>
         <div class="grid-container">
@@ -53,7 +52,7 @@
                 />
             </div>
             <div class="grid text-3">
-                Seit 2022 sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der
+                Seit 2021 sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der
                 Katholischen jungen Gemeinde (KjG) im Bistum Aachen aktiv. Dies
                 ermöglicht uns spezielle Angebote für unsere Kindergruppen und
                 Leiter:innen wie Gruppenstundenangebote, Erlebniswochenenden
@@ -69,22 +68,6 @@
                 Hast du Lust bekommen, ein Teil der KPJH zu werden? Dann besuch
                 uns doch mal oder fordere mehr Infos über unser Kontaktformular
                 an.
-            </div>
-        </div>
-        <div class="text-center">
-            <h3>Unser Vorstand</h3>
-        </div>
-        <div class="board">
-            <img
-                class="logo"
-                src="~/assets/kjg_kpjh_logo.svg"
-            />
-            <div class="board-members">
-                <div>1. Vorsitzende: Lorena Schünke</div>
-                <div>2. Vorsitzender: Paul Vornhusen</div>
-                <div>Kassiererin: Janine Führmann</div>
-                <div>Materialwärterin: Rebekka Schiffers</div>
-                <div>Beisitzerin: Lea Gielen</div>
             </div>
         </div>
     </div>
@@ -119,29 +102,7 @@ h3 {
     grid-gap: 1rem;
     margin-bottom: 2rem;
 }
-.board {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 'image board-members';
-    margin: 5rem;
-}
-.logo {
-    max-width: 350px;
-    grid-area: image;
-    @media (min-width: 901px) {
-        transform: rotate(-5deg) translateX(-25px);
-    }
-}
-.board-members {
-    grid-area: board-members;
-    margin: 2rem;
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
-}
+
 .grid {
     margin-bottom: 2rem;
     display: flex;

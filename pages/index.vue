@@ -39,20 +39,11 @@
                     />
                 </div>
             </div>
-            <Downloads :downloads="downloads" />
-            <svg
-                class="wave"
-                viewBox="0 0 1440 139"
-                fill="var(--secondaryBg)"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-            >
-                <path
-                    d="M381.765 99.5C236.064 99.5 70.549 125.567 0 138.6V0H1440V114.522C1373.95 109.515 1255.77 138.6 1021.21 138.6C728.005 138.6 563.892 99.5 381.765 99.5Z"
-                />
-            </svg>
+            <div class="text-center mt-5">
+                <h4>Aktuelle Downloads</h4>
+            </div>
+            <Downloads :downloads="downloads" class="mb-5"/>
         </section>
-        <AboutUs />
     </div>
 </template>
 
@@ -178,7 +169,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 0;
+    margin: 2rem 0 4rem 0;
 }
 
 .event {
