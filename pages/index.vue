@@ -14,7 +14,7 @@
             />
             </clipPath>
         </svg>
-        <header>
+        <!-- <header>
             <Diashow
                 v-for="(diashow, index) in diashows"
                 :key="index"
@@ -24,6 +24,9 @@
                 :transition="800"
                 repeat
             />
+        </header> -->
+        <header>
+            <img src="/images/kpjh-website.gif" class="responsive-gif" />
         </header>
         <section>
             <h4 class="text-center">Aktuelles</h4>
@@ -69,20 +72,6 @@ export default {
                         }
                     }
                 }
-                diashow: homepageCollection(limit: 0) {
-                    items {
-                        images: diashowCollection(limit: 0) {
-                            items {
-                                url(
-                                    transform: {
-                                        format: JPG_PROGRESSIVE
-                                        quality: 80
-                                    }
-                                )
-                            }
-                        }
-                    }
-                }
                 downloads: downloadsCollection(limit: 0) {
                     items {
                         title
@@ -98,25 +87,22 @@ export default {
             data: {
                 value: {
                     events: { items: events },
-                    diashow: { items: diashows },
                     downloads: { items: downloads },
                 },
             },
         } = await useAsyncQuery(query)
         //    const { data} = await useAsyncQuery(query2)
 
-        diashows = diashows || []
         events = events || []
         downloads = downloads || []
         // const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
-        return { events, diashows, downloads }
+        return { events, downloads }
     },
 }
 </script>
 
 <style scoped lang="scss">
 header {
-    width: 100%;
     background: url(../assets/header.svg);
     background-size: 100% 95%;
     background-position: top;
@@ -124,24 +110,29 @@ header {
     margin-bottom: 50px;
     filter: drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
     position: relative;
+}
 
-    &::before {
-        content: '';
-        width: 100%;
-        height: 100px;
-        z-index: 3;
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.547) 0%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        position: absolute;
-    }
+// shadow to make navbar more visible
+header::before {
+    content: '';
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.547) 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+}
+
+header img {
+    width: 100%;
+    max-height: 900px;
+    object-fit: cover;
+    object-position: top;
 }
 
 header :deep(img) {
     clip-path: url(#wave);
 }
+
 
 section {
     background: var(--secondaryBg);
