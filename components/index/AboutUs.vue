@@ -4,21 +4,21 @@
             <h3>Echte Frönde stonnt tesaame...</h3>
         </div>
         <div class="grid-container">
-            <div class="grid header">
+            <p class="grid header">
                 .....unter diesem Motto steht die Katholische Pfarrjugend Hüls
                 seit 1978. Spielerisch lernen unsere jungen Mitglieder durch
                 verschiedene Aktivitäten die Bedeutung von Freundschaft,
                 Zusammenhalt und Verantwortung. Neben unseren wöchentlichen
                 Gruppenstunden organisiert die Leiterrunde über das Jahr
                 verteilt verschiedene Aktivitäten.
-            </div>
+            </p>
             <div class="grid pic-1">
                 <img
                     class="grid-pic"
                     src="/images/buellingen.jpg"
                 />
             </div>
-            <div class="grid text-1">
+            <p class="grid text-1">
                 Jeden November können sich Kinder ab der vierten Klassen in neu
                 entstehende Mädchen- bzw. Jungengruppen einteilen lassen oder
                 jederzeit in eine gleichaltrige Gruppe eintreten. Die Gruppen
@@ -27,14 +27,14 @@
                 basteln, toben und viel zu lachen. Dies stärkt ganz besonders
                 den Zusammenhalt, sodass aus der anfangs bunten Truppe meist ein
                 enger Freundeskreis wird.
-            </div>
+            </p>
             <div class="grid pic-2">
                 <img
                     class="grid-pic"
                     src="/images/Lagerwochenende-225.jpg"
                 />
             </div>
-            <div class="grid text-2">
+            <p class="grid text-2">
                 Über das Jahr verteilt organisiert die Leiterrunde verschiedene
                 Ausflüge ins Spaßbad oder den Freizeitpark sowie das
                 Kartoffelfeuer mit einer Rallye oder Fahrradtour und
@@ -44,31 +44,30 @@
                 am Lagerfeuer, die verschiedenen Stafetten und das
                 Brennball-Turnier, aber auch der gemeinsame Küchen-, Toiletten-
                 oder Ordnungsdienst macht eine Menge Spaß.
-            </div>
+            </p>
             <div class="grid pic-3">
                 <img
                     class="grid-pic"
                     src="/images/Irrel2018_12_Party.jpg"
                 />
             </div>
-            <div class="grid text-3">
+            <p class="grid text-3">
                 Seit 2021 sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der
                 Katholischen jungen Gemeinde (KjG) im Bistum Aachen aktiv. Dies
                 ermöglicht uns spezielle Angebote für unsere Kindergruppen und
                 Leiter:innen wie Gruppenstundenangebote, Erlebniswochenenden
                 oder Fortbildungen anzubieten.
-            </div>
+            </p>
             <div class="grid pic-4">
                 <img
                     class="grid-pic"
                     src="/images/Zeltlager2017_Feuer.jpg"
                 />
             </div>
-            <div class="grid footer">
+            <p class="grid footer">
                 Hast du Lust bekommen, ein Teil der KPJH zu werden? Dann besuch
-                uns doch mal oder fordere mehr Infos über unser Kontaktformular
-                an.
-            </div>
+                uns doch mal oder schreibe uns auf <a href="https://www.instagram.com/kpjhuels">Instagram</a>,<a href="https://www.facebook.com/kpjh.huels/" style="margin-right: 5px;">Facebook</a> oder per <a href="mailto:info@kpjh.de">E-Mail</a>!
+            </p>
         </div>
     </div>
 </template>
@@ -82,6 +81,10 @@ h2 {
 h3 {
     font-family: 'ylee MHIM';
     font-size: 50px;
+}
+a {
+    color: black;
+    margin-left: 5px;
 }
 
 .grid-container {
