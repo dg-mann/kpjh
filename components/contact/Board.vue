@@ -7,7 +7,7 @@
         <div class="board">
             <img
                 class="logo"
-                src="~/assets/kjg_kpjh_logo.svg"
+                src="~/assets/board.jpeg"
             />
             <div class="board-members">
                 <div>1. Vorsitzende: Lorena Schünke</div>
@@ -33,6 +33,7 @@
 .logo {
     max-width: 350px;
     grid-area: image;
+    border-radius: 5%;
     @media (min-width: 901px) {
         transform: rotate(-5deg) translateX(-25px);
     }

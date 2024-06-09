@@ -3,8 +3,7 @@
         <head>
             <title>Kontakt</title>
         </head>
-        <Form />
-
+        <Socials />
         <Board />
 
     </DefaultView>
