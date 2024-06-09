@@ -28,7 +28,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 'image board-members';
-    margin: 5rem;
+    margin: 5rem 0;
 }
 .logo {
     max-width: 350px;
@@ -45,4 +45,10 @@
     gap: 15px;
     flex-direction: column;
 }
+@media (max-width: 900px) {
+    .board {
+        display: block;
+        margin-top: 3rem;
+    }
+} 
 </style>

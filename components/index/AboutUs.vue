@@ -64,9 +64,9 @@
                     src="/images/Zeltlager2017_Feuer.jpg"
                 />
             </div>
-            <p class="grid footer">
+            <p class=" footer">
                 Hast du Lust bekommen, ein Teil der KPJH zu werden? Dann besuch
-                uns doch mal oder schreibe uns auf <a href="https://www.instagram.com/kpjhuels">Instagram</a>,<a href="https://www.facebook.com/kpjh.huels/" style="margin-right: 5px;">Facebook</a> oder per <a href="mailto:info@kpjh.de">E-Mail</a>!
+                uns doch mal oder schreibe uns auf <a href="https://www.instagram.com/kpjhuels">Instagram</a>, <a href="https://www.facebook.com/kpjh.huels/"> Facebook</a> oder per <a href="mailto:info@kpjh.de">E-Mail</a>!
             </p>
         </div>
     </div>
@@ -84,7 +84,6 @@ h3 {
 }
 a {
     color: black;
-    margin-left: 5px;
 }
 
 .grid-container {

@@ -84,6 +84,15 @@
             margin: 0;
         }
     }
-    
 }
+
+@media (max-width: 900px) {
+    .socials{
+        display: block;
+        margin: 0;
+        .logo {
+            margin: 3rem 0;
+        }
+    }
+} 
 </style>
