@@ -14,7 +14,7 @@
             />
             </clipPath>
         </svg>
-        <header>
+        <!-- <header>
             <Diashow
                 v-for="(diashow, index) in diashows"
                 :key="index"
@@ -24,6 +24,20 @@
                 :transition="800"
                 repeat
             />
+        </header> -->
+        <header>
+            <img src="/images/kpjh-website.gif" class="responsive-gif" />
+            <svg
+                class="arrow-down"
+                viewBox="0 0 28 18"
+                fill="white"
+                xmlns="http://www.w3.org/2000/svg"
+                @click="scrollDown()"
+            >
+                <path
+                    d="M15.9639 16.2952C14.8821 17.4034 13.1179 17.4034 12.0361 16.2952L0.801466 4.78587C-0.267156 3.69112 -0.267156 1.92596 0.801466 0.831215C1.88326 -0.277029 3.64744 -0.277029 4.72924 0.831215L14 10.5L23.2708 0.831214C24.3526 -0.27703 26.1167 -0.27703 27.1985 0.831214C28.2672 1.92596 28.2672 3.69112 27.1985 4.78587L15.9639 16.2952Z"
+                />
+            </svg>
         </header>
         <section>
             <h4 class="text-center">Aktuelles</h4>
@@ -39,20 +53,11 @@
                     />
                 </div>
             </div>
-            <Downloads :downloads="downloads" />
-            <svg
-                class="wave"
-                viewBox="0 0 1440 139"
-                fill="var(--secondaryBg)"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-            >
-                <path
-                    d="M381.765 99.5C236.064 99.5 70.549 125.567 0 138.6V0H1440V114.522C1373.95 109.515 1255.77 138.6 1021.21 138.6C728.005 138.6 563.892 99.5 381.765 99.5Z"
-                />
-            </svg>
+            <div class="text-center mt-5">
+                <h4>Aktuelle Downloads</h4>
+            </div>
+            <Downloads :downloads="downloads" class="mb-5"/>
         </section>
-        <AboutUs />
     </div>
 </template>
 
@@ -78,20 +83,6 @@ export default {
                         }
                     }
                 }
-                diashow: homepageCollection(limit: 0) {
-                    items {
-                        images: diashowCollection(limit: 0) {
-                            items {
-                                url(
-                                    transform: {
-                                        format: JPG_PROGRESSIVE
-                                        quality: 80
-                                    }
-                                )
-                            }
-                        }
-                    }
-                }
                 downloads: downloadsCollection(limit: 0) {
                     items {
                         title
@@ -107,25 +98,30 @@ export default {
             data: {
                 value: {
                     events: { items: events },
-                    diashow: { items: diashows },
                     downloads: { items: downloads },
                 },
             },
         } = await useAsyncQuery(query)
-        //    const { data} = await useAsyncQuery(query2)
 
-        diashows = diashows || []
         events = events || []
         downloads = downloads || []
-        // const { data: { value: {images: {items: diashow}} }} = await useAsyncQuery(query2)
-        return { events, diashows, downloads }
+
+        return { events, downloads }
     },
+    methods: {
+        scrollDown() {
+            window.scrollBy({
+                top: window.innerHeight / 2,
+                behavior: 'smooth'
+            });
+        }
+    }
 }
 </script>
 
+
 <style scoped lang="scss">
 header {
-    width: 100%;
     background: url(../assets/header.svg);
     background-size: 100% 95%;
     background-position: top;
@@ -133,23 +129,43 @@ header {
     margin-bottom: 50px;
     filter: drop-shadow(0px 0px 16px rgb(0 0 0 / 0.5));
     position: relative;
+}
 
-    &::before {
-        content: '';
-        width: 100%;
-        height: 100px;
-        z-index: 3;
-        background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.547) 0%,
-            rgba(255, 255, 255, 0) 100%
-        );
-        position: absolute;
-    }
+// shadow to make navbar more visible
+header::before {
+    content: '';
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.547) 0%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+}
+
+header img {
+    width: 100%;
+    max-height: 760px;
+    object-fit: cover;
+    object-position: 0% 75%;
 }
 
 header :deep(img) {
     clip-path: url(#wave);
+}
+.arrow-down {
+    position: absolute;
+    bottom: 5rem;
+    right: 2rem;
+    width: 28px;
+    height: 15px;
+    cursor: pointer; 
+    z-index: 10; 
+    display: none;
+}
+
+@media (min-width: 1300px) {
+    .arrow-down {
+        display: block; /* Anzeigen bei Breiten von mindestens 1300px */
+    }
 }
 
 section {
@@ -178,7 +194,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 0;
+    margin: 2rem 0 4rem 0;
 }
 
 .event {

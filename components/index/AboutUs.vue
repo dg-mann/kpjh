@@ -1,25 +1,24 @@
 <template>
     <div class="b-container">
         <div class="text-center">
-            <h2>Das sind wir</h2>
             <h3>Echte Frönde stonnt tesaame...</h3>
         </div>
         <div class="grid-container">
-            <div class="grid header">
+            <p class="grid header">
                 .....unter diesem Motto steht die Katholische Pfarrjugend Hüls
                 seit 1978. Spielerisch lernen unsere jungen Mitglieder durch
                 verschiedene Aktivitäten die Bedeutung von Freundschaft,
                 Zusammenhalt und Verantwortung. Neben unseren wöchentlichen
                 Gruppenstunden organisiert die Leiterrunde über das Jahr
                 verteilt verschiedene Aktivitäten.
-            </div>
+            </p>
             <div class="grid pic-1">
                 <img
                     class="grid-pic"
                     src="/images/buellingen.jpg"
                 />
             </div>
-            <div class="grid text-1">
+            <p class="grid text-1">
                 Jeden November können sich Kinder ab der vierten Klassen in neu
                 entstehende Mädchen- bzw. Jungengruppen einteilen lassen oder
                 jederzeit in eine gleichaltrige Gruppe eintreten. Die Gruppen
@@ -28,14 +27,14 @@
                 basteln, toben und viel zu lachen. Dies stärkt ganz besonders
                 den Zusammenhalt, sodass aus der anfangs bunten Truppe meist ein
                 enger Freundeskreis wird.
-            </div>
+            </p>
             <div class="grid pic-2">
                 <img
                     class="grid-pic"
                     src="/images/Lagerwochenende-225.jpg"
                 />
             </div>
-            <div class="grid text-2">
+            <p class="grid text-2">
                 Über das Jahr verteilt organisiert die Leiterrunde verschiedene
                 Ausflüge ins Spaßbad oder den Freizeitpark sowie das
                 Kartoffelfeuer mit einer Rallye oder Fahrradtour und
@@ -45,47 +44,30 @@
                 am Lagerfeuer, die verschiedenen Stafetten und das
                 Brennball-Turnier, aber auch der gemeinsame Küchen-, Toiletten-
                 oder Ordnungsdienst macht eine Menge Spaß.
-            </div>
+            </p>
             <div class="grid pic-3">
                 <img
                     class="grid-pic"
                     src="/images/Irrel2018_12_Party.jpg"
                 />
             </div>
-            <div class="grid text-3">
-                Seit 2022 sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der
+            <p class="grid text-3">
+                Seit 2021 sind wir als Ortsgruppe „KjG Pfarrjugend Hüls“ der
                 Katholischen jungen Gemeinde (KjG) im Bistum Aachen aktiv. Dies
                 ermöglicht uns spezielle Angebote für unsere Kindergruppen und
                 Leiter:innen wie Gruppenstundenangebote, Erlebniswochenenden
                 oder Fortbildungen anzubieten.
-            </div>
+            </p>
             <div class="grid pic-4">
                 <img
                     class="grid-pic"
                     src="/images/Zeltlager2017_Feuer.jpg"
                 />
             </div>
-            <div class="grid footer">
+            <p class=" footer">
                 Hast du Lust bekommen, ein Teil der KPJH zu werden? Dann besuch
-                uns doch mal oder fordere mehr Infos über unser Kontaktformular
-                an.
-            </div>
-        </div>
-        <div class="text-center">
-            <h3>Unser Vorstand</h3>
-        </div>
-        <div class="board">
-            <img
-                class="logo"
-                src="~/assets/kjg_kpjh_logo.svg"
-            />
-            <div class="board-members">
-                <div>1. Vorsitzende: Lorena Schünke</div>
-                <div>2. Vorsitzender: Paul Vornhusen</div>
-                <div>Kassiererin: Janine Führmann</div>
-                <div>Materialwärterin: Rebekka Schiffers</div>
-                <div>Beisitzerin: Lea Gielen</div>
-            </div>
+                uns doch mal oder schreibe uns auf <a href="https://www.instagram.com/kpjhuels">Instagram</a>, <a href="https://www.facebook.com/kpjh.huels/"> Facebook</a> oder per <a href="mailto:info@kpjh.de">E-Mail</a>!
+            </p>
         </div>
     </div>
 </template>
@@ -99,6 +81,9 @@ h2 {
 h3 {
     font-family: 'ylee MHIM';
     font-size: 50px;
+}
+a {
+    color: black;
 }
 
 .grid-container {
@@ -119,29 +104,7 @@ h3 {
     grid-gap: 1rem;
     margin-bottom: 2rem;
 }
-.board {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 'image board-members';
-    margin: 5rem;
-}
-.logo {
-    max-width: 350px;
-    grid-area: image;
-    @media (min-width: 901px) {
-        transform: rotate(-5deg) translateX(-25px);
-    }
-}
-.board-members {
-    grid-area: board-members;
-    margin: 2rem;
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
-}
+
 .grid {
     margin-bottom: 2rem;
     display: flex;
